@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Password Strength Checker | Shannon Entropy Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 PASSWORD STRENGTH CHECKER</h1>
+            <p>Based on Shannon Entropy & Real-world Crack Time Estimation</p>
+        </div>
+
+        <div class="card">
+            <div class="input-section">
+                <label for="password">Enter your password:</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Type or paste your password..." autocomplete="off">
+                    <button id="togglePassword" class="toggle-btn">👁️</button>
+                </div>
+            </div>
+
+            <div id="result" class="result-section">
+                <div class="loading">🔍 Enter a password to analyze...</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>⚡ Estimates based on 10 billion guesses per second (offline attack scenario)</p>
+            <p>🔒 Using Shannon Entropy: length × log₂(character_space)</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
